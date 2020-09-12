@@ -1,20 +1,17 @@
 import React from "react";
 import { Tabs } from "antd";
+import { LoginForm, SignUpForm } from "../components";
 
 const { TabPane } = Tabs;
 
-function callback(key) {
-	console.log(key);
-}
-
 function AuthPage() {
 	return (
-		<Tabs defaultActiveKey="1" onChange={callback}>
+		<Tabs defaultActiveKey="login">
 			<TabPane tab="Login" key="login">
-				Login
+				<LoginForm />
 			</TabPane>
 			<TabPane tab="SignUp" key="signup">
-				SignUp
+				<SignUpForm />
 			</TabPane>
 		</Tabs>
 	);
